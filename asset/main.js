@@ -40,23 +40,22 @@ buttonEL.addEventListener('click', (event) => {
     console.log("Età", ageEL.value);
 
     //console.log(`${finalPrice}€`);
+    let finalPrice = km * kmPrice
+
+
+    function discount(prezzo, età) {
+
+        if (età < 18) {
+            return prezzo * 0.8
+        } else if (età > 65) {
+            return prezzo * 0.6
+        } else {
+            return prezzo
+        }
+    }
+
+    finalPrice = discount(finalPrice, ageEL.value)
+    console.log(`${finalPrice}€`);
 
 })
 
-let finalPrice = Number(kmEL * kmPrice)
-
-
-
-function discount() {
-    if (ageEL.value <= 18) {
-        finalPrice * 0.8
-    } else if (ageEL.value >= 65) {
-        finalPrice * 0.6
-    } else {
-        finalPrice * 1
-    }
-}
-
-finalPrice = discount(finalPrice, ageEL.value)
-
-console.log(`${finalPrice}€`);
