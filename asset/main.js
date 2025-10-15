@@ -22,6 +22,7 @@ va applicato uno sconto del 40% per gli over 65.
 
 const nameEL = document.getElementById('name-field')
 const kmEL = document.getElementById('km-field')
+const ageEL = document.getElementById('age-field')
 const buttonEL = document.getElementById('button')
 const km = Number(0.21)
 console.log(km);
@@ -30,14 +31,28 @@ console.log(km);
 
 buttonEL.addEventListener('click', (event) => {
     event.preventDefault()
-    const finalPrice = (kmEL.value * km)
+    const name = nameEL.value
+    const km = Number(kmEL.value)
+    const age = Number(ageEL.value)
+    //const finalPrice = (kmEL.value * km)
     console.log("Nome:", nameEL.value)
     console.log("Km:", kmEL.value)
-    console.log(`${finalPrice}€`);
+    //console.log(`${finalPrice}€`);
 
 })
 
+let finalPrice = kmEL * km
 
+finalPrice = discount(finalPrice, ageEL)
 
+function discount() {
+    if (ageEL.value <= 18) {
+        finalPrice * 0.8
+    } else if (ageEL.value >= 65) {
+        finalPrice * 0.6
+    } else {
+        finalPrice * 1
+    }
+}
 
-
+console.log(finalPrice);
