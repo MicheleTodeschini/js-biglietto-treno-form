@@ -24,8 +24,8 @@ const nameEL = document.getElementById('name-field')
 const kmEL = document.getElementById('km-field')
 const ageEL = document.getElementById('age-field')
 const buttonEL = document.getElementById('button')
-const km = Number(0.21)
-console.log(km);
+const kmPrice = Number(0.21)
+console.log(kmPrice);
 
 
 
@@ -37,13 +37,15 @@ buttonEL.addEventListener('click', (event) => {
     //const finalPrice = (kmEL.value * km)
     console.log("Nome:", nameEL.value)
     console.log("Km:", kmEL.value)
+    console.log("Età", ageEL.value);
+
     //console.log(`${finalPrice}€`);
 
 })
 
-let finalPrice = kmEL * km
+let finalPrice = Number(kmEL * kmPrice)
 
-finalPrice = discount(finalPrice, ageEL)
+
 
 function discount() {
     if (ageEL.value <= 18) {
@@ -55,4 +57,6 @@ function discount() {
     }
 }
 
-console.log(finalPrice);
+finalPrice = discount(finalPrice, ageEL.value)
+
+console.log(`${finalPrice}€`);
