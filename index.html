@@ -34,8 +34,49 @@
               />
             </form>
           </div>
-          <div class="col-4"></div>
-          <div class="col-4"></div>
+          <div class="col-4">
+            <h3>Km da percorrere</h3>
+            <br />
+            <form>
+              <input
+                class="form-control"
+                placeholder="Inserire quanti km si vogliono fare"
+                type="number"
+                id="age-field"
+                value=""
+                required
+              />
+            </form>
+          </div>
+          <div class="col-4">
+            <h3>Fascia d'età</h3>
+            <br />
+            <form>
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Scegli la fascia d'età
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Maggiorenne</a></li>
+                  <li><a class="dropdown-item" href="#">Adulto</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Over 65</a>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row py-5">
+          <div class="col-12 text-center">
+            <button>Genera</button>
+            <button>Annulla</button>
+          </div>
         </div>
       </section>
     </main>
