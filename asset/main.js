@@ -30,6 +30,14 @@ console.log(km);
 
 buttonEL.addEventListener('click', (event) => {
     event.preventDefault()
+    const finalPrice = (kmEL.value * km)
     console.log("Nome:", nameEL.value)
     console.log("Km:", kmEL.value)
+    console.log(`${finalPrice}€`);
+
 })
+
+
+
+
+
