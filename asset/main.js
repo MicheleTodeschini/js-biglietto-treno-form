@@ -17,3 +17,19 @@ va applicato uno sconto del 40% per gli over 65.
 // 0,21 € al km
 // se minorenne, sconto 20%
 // se over 65, sconto 40%
+
+// dichiaro costanti che prendo dal file html
+
+const nameEL = document.getElementById('name-field')
+const kmEL = document.getElementById('km-field')
+const buttonEL = document.getElementById('button')
+const km = Number(0.21)
+console.log(km);
+
+
+
+buttonEL.addEventListener('click', (event) => {
+    event.preventDefault()
+    console.log("Nome:", nameEL.value)
+    console.log("Km:", kmEL.value)
+})
